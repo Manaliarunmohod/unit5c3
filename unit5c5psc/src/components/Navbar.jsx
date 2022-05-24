@@ -10,9 +10,9 @@ export const Navbar=()=>{
 
     return (
         <div>
-<Link to="/">Home</Link>
-<Link to="/employees">Employees List</Link>
-<Link to={isAuth?"/logout":"/login"}>{isAuth?"logout":"login"}</Link>
+<Link to="/">Home   </Link>
+<Link to="/employees">Employees List   </Link>
+<Link to={isAuth?"/logout":"/login"}>{isAuth?"logout   ":"login   "}</Link>
 
 
         </div>

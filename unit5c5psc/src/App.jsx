@@ -5,7 +5,8 @@ import {Routes,Route} from "react-router-dom"
 import {Home} from "./components/Home"
 import {EmployeeList} from"./components/EmployeeList"
  import {Login} from "./components/login"
- import {Logout} from "./components/Logout"
+ import {Logout} from "./components/Logout";
+ import {EmployeeDetails} from "./components/EmployeesDetails"
 function App() {
   const [count, setCount] = useState(0)
 
@@ -17,6 +18,7 @@ function App() {
 <Route path="/employees" element={<EmployeeList/>}></Route>
 <Route path="/login" element={<Login/>}></Route>
 <Route path="/logout" element={<Logout/>}></Route>
+<Route path="/employees/:id" element={<EmployeeDetails/>}></Route>
      </Routes>
     </div>
   )
