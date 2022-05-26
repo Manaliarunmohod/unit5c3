@@ -10,7 +10,8 @@ import { AuthContext } from "../Contexts/AuthContext";
 
 export const EmployeeDetails=()=>{
     const {isAuth}=useContext(AuthContext)
-  const [employee,setEmployee]=useState({})  
+  const [employee,setEmployee]=useState([])  
+//   const [employ, setemp]=useState([])
 const {id}=useParams()
 
 useEffect(()=>{
@@ -23,12 +24,15 @@ async function getData(){
     setEmployee(data);
     console.log(data)
 }
-if(!isAuth)
-{
-    return <Navigate to={"./login.jsx"}></Navigate>
-}
+// if(!isAuth)
+// {
+//     return <Navigate to={"./login.jsx"}></Navigate>
+// }
 
     return(
-        <div>data</div>
+        <div>
+            <img src={employee.image} alt="" />
+             <h2>{employee.employee_name}</h2>
+        </div>
     )
 }

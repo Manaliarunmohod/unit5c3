@@ -23,7 +23,7 @@ setEmployee(data)
     
     {Employee.map((e)=>{
         return(
-            <Link to="/employees/${e.id}">
+            <Link to={`/employee/${e.id}`}>
             <div key={e.id}>
            <div> {e.employee_name}</div>    
            <div><img src={e.image}/></div>
